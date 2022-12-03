@@ -24,7 +24,7 @@ class MakamFactory extends Factory
         $faker = Faker::create();
 
         return [
-            'nama' => $faker->name(),
+            'nama' => $faker->company(),
             'alamat' => $faker->address(),
             'agama' => "islam",
             'tempat_tersedia' => random_int(1, 100)

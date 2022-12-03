@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\MakamController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TransaksiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,9 +25,11 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/makam', [MakamController::class, 'index'])->middleware('auth')->name('makam.index');
-Route::get('/makam/view', [MakamController::class, 'view'])->middleware('auth')->name('makam.view');
-Route::get('/makam/order', [MakamController::class, 'order'])->middleware('auth')->name('makam.order');
-Route::get('/makam/success', [MakamController::class, 'success'])->middleware('auth')->name('makam.success');
+Route::get('/makam/{id}', [MakamController::class, 'view'])->middleware('auth')->name('makam.view');
+Route::get('/makam/order/{userId}/{makamId}', [MakamController::class, 'order'])->middleware('auth')->name('makam.order');
+Route::get('/makam/success/{requestId}', [MakamController::class, 'success'])->middleware('auth')->name('makam.success');
+
+Route::post('/transaksi/post', [TransaksiController::class, 'post'])->middleware('auth')->name('transaksi.post');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

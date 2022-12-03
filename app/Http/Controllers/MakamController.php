@@ -2,28 +2,42 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Makam;
+use App\Models\Transaksi;
 use Illuminate\Http\Request;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class MakamController extends Controller
 {
     public function index()
     {
-        return view('makam.index');
+        $makam = Makam::all();
+        return view('makam.index', compact('makam'));
     }
 
 
-    public function view()
+    public function view($id)
     {
-        return view('makam.view');
+        $view = Makam::where('id', $id)->first();
+        $user = Auth::user();
+        return view('makam.view', compact('view', 'user'));
     }
 
-    public function order()
+    public function order($idUser, $idMakam)
     {
-        return view('makam.order');
+        $user = User::where('id', $idUser)->first();
+        $view = Makam::where('id', $idMakam)->first();
+
+        return view('makam.order', compact('view', 'user'));
     }
 
-    public function success()
+
+    public function success($idTransaksi)
     {
-        return view('makam.success');
+        $tr = Transaksi::where('id', $idTransaksi)->first();
+        $user = User::where('id', $tr->user_id)->first();
+        $view = Makam::where('id', $tr->makam_id)->first();
+        return view('makam.success', compact('user', 'view', 'tr'));
     }
 }
