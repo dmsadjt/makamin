@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MakamController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,10 +23,15 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/makam', [MakamController::class, 'index'])->middleware('auth')->name('makam.index');
+Route::get('/makam/view', [MakamController::class, 'view'])->middleware('auth')->name('makam.view');
+Route::get('/makam/order', [MakamController::class, 'order'])->middleware('auth')->name('makam.order');
+Route::get('/makam/success', [MakamController::class, 'success'])->middleware('auth')->name('makam.success');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
