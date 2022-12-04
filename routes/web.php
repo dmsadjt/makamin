@@ -26,6 +26,10 @@ Route::get('/', function () {
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::middleware(['auth', 'user-access:makam'])->group(function () {
+    Route::get('/makam/home', [App\Http\Controllers\HomeController::class, 'makamHome'])->name('makam.home');
+});
+
 
 Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -55,9 +59,6 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::post('/admin/transaksi/tolak', [AdminController::class, 'tolakTransaksi']);
 });
 
-Route::middleware(['auth', 'user-access:makam'])->group(function () {
-    Route::get('/makam/home', [App\Http\Controllers\HomeController::class, 'makamHome'])->name('makam.home');
-});
 
 
 require __DIR__ . '/auth.php';
