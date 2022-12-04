@@ -31,6 +31,21 @@ class DatabaseSeeder extends Seeder
             'name' => 'Administrator',
             'email' => 'admin@makamin.com',
             'password' => Hash::make('pass@admin'),
+            'type' => 1,
+        ]);
+
+        DB::table('users')->insert([
+            'name' => 'User',
+            'email' => 'user@makamin.com',
+            'password' => Hash::make('pass@user'),
+            'type' => 0,
+        ]);
+
+        DB::table('users')->insert([
+            'name' => 'Makam',
+            'email' => 'makam@makamin.com',
+            'password' => Hash::make('pass@makam'),
+            'type' => 2,
         ]);
     }
 }

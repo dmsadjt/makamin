@@ -1,6 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Pemesanan Berhasil')
-
+@section('title', 'Home')
 
 @section('content')
     <div class="container">
@@ -16,17 +15,19 @@
                             </div>
                         @endif
 
-                        <div class="card-body">
-                            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                                <div class="p-6 text-gray-900">
-                                    Pemesananmu pada Makam {{ $view->nama }} telah berhasil pada tanggal
-                                    {{ $tr->tanggal_pemesanan }}
+                        <div class="py-12">
+                            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                                <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                                    <div class="p-6 text-gray-900">
+                                        {{ __("You're logged in!") }}
+                                    </div>
 
-                                    <p>Pesananmu akan diverifikasi oleh admin dan pemilik makam, informasi lebih lanjut
-                                        dapat dilihat pada halaman Transaksi</p>
+                                    <div class="p-6 text-gray-900">
+                                        <a href="/makam">Lihat Daftar Makam di Surabaya</a>
+                                    </div>
+
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>

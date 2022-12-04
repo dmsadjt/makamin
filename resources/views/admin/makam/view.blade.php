@@ -39,8 +39,6 @@
 
                                     </table>
 
-                                    <a href="/makam/order/{{ $user->id }}/{{ $view->id }}"><button
-                                            class="btn btn-light mt-2">Pesan Tempat</button></a>
                                 </div>
                             </div>
 

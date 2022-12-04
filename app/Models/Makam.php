@@ -9,6 +9,13 @@ class Makam extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'nama',
+        'alamat',
+        'agama',
+        'tempat_tersedia',
+    ];
+
     public function rekenings()
     {
         return $this->hasMany(RekeningMakam::class);

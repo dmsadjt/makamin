@@ -37,7 +37,7 @@
                                                     <td>{{ $m->alamat }}</td>
                                                     <td>{{ $m->agama }}</td>
                                                     <td>{{ $m->tempat_tersedia }}</td>
-                                                    <td><a href="/makam/{{ $m->id }}">Lihat Makam</a></td>
+                                                    <td><a href="/admin/makam/{{ $m->id }}">Lihat Makam</a></td>
                                                 </tr>
                                             @endforeach
 

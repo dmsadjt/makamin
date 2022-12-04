@@ -21,23 +21,17 @@
                                     <table>
                                         <thead>
                                             <th>#</th>
-                                            <th>Nama Makam</th>
-                                            <th>Alamat</th>
-                                            <th>Agama</th>
-                                            <th>Tempat Tersedia</th>
-                                            <th>Aksi</th>
+                                            <th>Nama</th>
+                                            <th>Alamat Email</th>
                                         </thead>
                                         <tbody>
-                                            @foreach ($makam as $m)
+                                            @foreach ($user as $m)
                                                 <tr>
                                                     <td>
                                                         {{ $m->id }}
                                                     </td>
-                                                    <td>{{ $m->nama }}</td>
-                                                    <td>{{ $m->alamat }}</td>
-                                                    <td>{{ $m->agama }}</td>
-                                                    <td>{{ $m->tempat_tersedia }}</td>
-                                                    <td><a href="/makam/{{ $m->id }}">Lihat Makam</a></td>
+                                                    <td>{{ $m->name }}</td>
+                                                    <td>{{ $m->email }}</td>
                                                 </tr>
                                             @endforeach
 

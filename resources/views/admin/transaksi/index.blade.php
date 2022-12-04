@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Daftar Makam')
+@section('title', 'Daftar Transaksi')
 
 @section('content')
     <div class="container">
@@ -21,23 +21,28 @@
                                     <table>
                                         <thead>
                                             <th>#</th>
+                                            <th>Nama User</th>
                                             <th>Nama Makam</th>
-                                            <th>Alamat</th>
-                                            <th>Agama</th>
-                                            <th>Tempat Tersedia</th>
+                                            <th>Tanggal Pemesanan</th>
+                                            <th>Jumlah Makam</th>
+                                            <th>Total Pembelian</th>
+                                            <th>Status</th>
                                             <th>Aksi</th>
                                         </thead>
                                         <tbody>
-                                            @foreach ($makam as $m)
+                                            @foreach ($transaksi as $m)
                                                 <tr>
                                                     <td>
                                                         {{ $m->id }}
                                                     </td>
-                                                    <td>{{ $m->nama }}</td>
-                                                    <td>{{ $m->alamat }}</td>
-                                                    <td>{{ $m->agama }}</td>
-                                                    <td>{{ $m->tempat_tersedia }}</td>
-                                                    <td><a href="/makam/{{ $m->id }}">Lihat Makam</a></td>
+                                                    <td>{{ $m->user->name }}</td>
+                                                    <td>{{ $m->makam->nama }}</td>
+                                                    <td>{{ $m->tanggal_pemesanan }}</td>
+                                                    <td>{{ $m->jumlah_makam }}</td>
+                                                    <td>{{ $m->total_pembelian }}</td>
+                                                    <td>{{ $m->status }}</td>
+                                                    <td><a href="/admin/transaksi/{{ $m->id }}">Tinjau transaksi</a>
+                                                    </td>
                                                 </tr>
                                             @endforeach
 

@@ -1,6 +1,4 @@
 @extends('layouts.app')
-@section('title', 'Pemesanan Berhasil')
-
 
 @section('content')
     <div class="container">
@@ -17,16 +15,9 @@
                         @endif
 
                         <div class="card-body">
-                            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                                <div class="p-6 text-gray-900">
-                                    Pemesananmu pada Makam {{ $view->nama }} telah berhasil pada tanggal
-                                    {{ $tr->tanggal_pemesanan }}
-
-                                    <p>Pesananmu akan diverifikasi oleh admin dan pemilik makam, informasi lebih lanjut
-                                        dapat dilihat pada halaman Transaksi</p>
-                                </div>
-                            </div>
-
+                            <a href="/admin/makam">Makam</a>
+                            <a href="/admin/users">Users</a>
+                            <a href="/admin/transaksi">Transaksi</a>
                         </div>
                     </div>
                 </div>
