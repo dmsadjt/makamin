@@ -6,8 +6,12 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
+
+                <div>
+                    <a class="btn btn-secondary mb-2" href="/admin/makam">Kembali</a>
+                </div>
                 <div class="card">
-                    <div class="card-header">{{ __('Dashboard') }}</div>
+                    <div class="card-header">{{ $view->nama }}</div>
 
                     <div class="card-body">
                         @if (session('status'))
@@ -17,9 +21,9 @@
                         @endif
 
                         <div class="card-body">
-                            <div class="bg-white mt-2 overflow-hidden shadow-sm sm:rounded-lg">
-                                <div class="p-6  text-gray-900">
-                                    <table>
+                            <div class="bg-white mt-2 overflow-hidden shadow sm:rounded-lg">
+                                <div class="p-6 text-gray-900">
+                                    <table class="table">
                                         <tr>
                                             <td>Nama Makam</td>
                                             <td>{{ $view->nama }}</td>

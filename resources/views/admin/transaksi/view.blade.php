@@ -6,9 +6,11 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
+                <div>
+                    <a class="btn btn-secondary mb-2" href="/admin/transaksi">Kembali</a>
+                </div>
                 <div class="card">
-                    <div class="card-header">{{ __('Dashboard') }}</div>
-
+                    <div class="card-header">Pemesanan nomor {{ $view->id }}</div>
                     <div class="card-body">
                         @if (session('status'))
                             <div class="alert alert-success" role="alert">
@@ -17,9 +19,11 @@
                         @endif
 
                         <div class="card-body">
-                            <div class="bg-white mt-2 overflow-hidden shadow-sm sm:rounded-lg">
+                            <h5 class="card-title h-5">Tinjau pesanan nomor {{ $view->id }}</h5>
+
+                            <div class="bg-white mt-2 overflow-hidden shadow sm:rounded-lg">
                                 <div class="p-6  text-gray-900">
-                                    <table>
+                                    <table class="table">
                                         <tr>
                                             <td>Nama User</td>
                                             <td>{{ $view->user->name }}</td>
@@ -44,17 +48,18 @@
                                     </table>
 
                                     @if ($view->status == 'diproses')
-                                        <form action="/admin/transaksi/setujui" method="POST">
-                                            @csrf
-                                            <input type="hidden" name="id" value="{{ $view->id }}">
-                                            <input type="submit" value="Setujui">
-                                        </form>
-
-                                        <form action="/admin/transaksi/tolak" method="POST">
-                                            @csrf
-                                            <input type="hidden" name="id" value="{{ $view->id }}">
-                                            <input type="submit" value="Tolak">
-                                        </form>
+                                        <div class="d-flex gap-3">
+                                            <form action="/admin/transaksi/setujui" method="POST">
+                                                @csrf
+                                                <input type="hidden" name="id" value="{{ $view->id }}">
+                                                <input type="submit" class="btn btn-success" value="Setujui">
+                                            </form>
+                                            <form action="/admin/transaksi/tolak" method="POST">
+                                                @csrf
+                                                <input type="hidden" name="id" value="{{ $view->id }}">
+                                                <input type="submit" class="btn btn-danger" value="Tolak">
+                                            </form>
+                                        </div>
                                     @endif
 
 

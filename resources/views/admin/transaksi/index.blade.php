@@ -5,6 +5,10 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
+                <div>
+                    <a class="btn btn-secondary mb-2" href="/admin/home">Kembali</a>
+                </div>
+
                 <div class="card">
                     <div class="card-header">{{ __('Dashboard') }}</div>
 
@@ -17,8 +21,8 @@
 
                         <div class="card-body">
                             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                                <div class="p-6 text-gray-900">
-                                    <table>
+                                <div class="p-1 text-gray-900">
+                                    <table class="table">
                                         <thead>
                                             <th>#</th>
                                             <th>Nama User</th>
@@ -41,7 +45,8 @@
                                                     <td>{{ $m->jumlah_makam }}</td>
                                                     <td>{{ $m->total_pembelian }}</td>
                                                     <td>{{ $m->status }}</td>
-                                                    <td><a href="/admin/transaksi/{{ $m->id }}">Tinjau transaksi</a>
+                                                    <td><a class="link-secondary"
+                                                            href="/admin/transaksi/{{ $m->id }}">Tinjau transaksi</a>
                                                     </td>
                                                 </tr>
                                             @endforeach
@@ -50,6 +55,9 @@
 
                                     </table>
 
+                                </div>
+                                <div class="m-2">
+                                    {{ $transaksi->links() }}
                                 </div>
                             </div>
                         </div>

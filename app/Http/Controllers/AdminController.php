@@ -11,7 +11,7 @@ class AdminController extends Controller
 {
     public function makamIndex()
     {
-        $makam = Makam::all();
+        $makam = Makam::paginate(10);
         return view('admin.makam.index', compact('makam'));
     }
 
@@ -23,13 +23,13 @@ class AdminController extends Controller
 
     public function usersIndex()
     {
-        $user = User::all();
+        $user = User::paginate(10);
         return view('admin.users.index', compact('user'));
     }
 
     public function transaksiIndex()
     {
-        $transaksi = Transaksi::all();
+        $transaksi = Transaksi::paginate(10);
         return view('admin.transaksi.index', compact('transaksi'));
     }
 

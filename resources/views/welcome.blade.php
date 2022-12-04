@@ -388,6 +388,7 @@
             font-family: 'Nunito', sans-serif;
         }
     </style>
+
 </head>
 
 <body class="antialiased">
@@ -396,6 +397,10 @@
         @if (Route::has('login'))
             <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                 @auth
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <input type="submit" class="btn btn-light" value="Log out">
+                    </form>
                 @else
                     <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
 
@@ -502,7 +507,8 @@
                                     href="https://forge.laravel.com" class="underline">Forge</a>, <a
                                     href="https://vapor.laravel.com" class="underline">Vapor</a>, <a
                                     href="https://nova.laravel.com" class="underline">Nova</a>, and <a
-                                    href="https://envoyer.io" class="underline">Envoyer</a> help you take your projects
+                                    href="https://envoyer.io" class="underline">Envoyer</a> help you take your
+                                projects
                                 to the next level. Pair them with powerful open source libraries like <a
                                     href="https://laravel.com/docs/billing" class="underline">Cashier</a>, <a
                                     href="https://laravel.com/docs/dusk" class="underline">Dusk</a>, <a

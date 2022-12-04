@@ -5,7 +5,11 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('Dashboard') }}</div>
+                    <div class="card-header">
+                        <h1 class="h6">
+                            Dashboard Administrator
+                        </h1>
+                    </div>
 
                     <div class="card-body">
                         @if (session('status'))
@@ -14,11 +18,21 @@
                             </div>
                         @endif
 
-                        <div class="card-body">
-                            <a href="/admin/makam">Makam</a>
-                            <a href="/admin/users">Users</a>
-                            <a href="/admin/transaksi">Transaksi</a>
-                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <h2><a class="link-dark" href="/admin/makam">Daftar Makam</a></h2>
+                                <small class="text-black-50">Lihat makam yang terdaftar</small>
+                            </li>
+                            <li class="list-group-item">
+                                <h2><a class="link-dark" href="/admin/users">Daftar Pengguna</a></h2>
+                                <small class="text-black-50">Lihat pengguna yang terdaftar</small>
+                            </li>
+                            <li class="list-group-item">
+                                <h2><a class="link-dark" href="/admin/transaksi">Daftar Transaksi</a></h2>
+                                <small class="text-black-50">Lihat transaksi yang sedang berlangsung</small>
+
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>

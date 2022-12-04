@@ -5,8 +5,11 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
+                <div>
+                    <a class="btn btn-secondary mb-2" href="/admin/home">Kembali</a>
+                </div>
                 <div class="card">
-                    <div class="card-header">{{ __('Dashboard') }}</div>
+                    <div class="card-header">Daftar Makam</div>
 
                     <div class="card-body">
                         @if (session('status'))
@@ -16,9 +19,9 @@
                         @endif
 
                         <div class="card-body">
-                            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                                <div class="p-6 text-gray-900">
-                                    <table>
+                            <div class="bg-white overflow-hidden shadow sm:rounded-lg">
+                                <div class="p-1 text-gray-900">
+                                    <table class="table">
                                         <thead>
                                             <th>#</th>
                                             <th>Nama Makam</th>
@@ -45,6 +48,9 @@
 
                                     </table>
 
+                                </div>
+                                <div class="m-2">
+                                    {{ $makam->links() }}
                                 </div>
                             </div>
                         </div>

@@ -4,6 +4,11 @@
 
 html {
     --white: #F4F4F4;
-    --black: #121212;
+    --blacky: #121212;
     --purple: #8670B6;
+
+}
+
+.bg-blacky {
+    background-color: var(--black);
 }
