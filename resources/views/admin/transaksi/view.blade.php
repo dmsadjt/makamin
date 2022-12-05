@@ -21,7 +21,7 @@
                         <div class="card-body">
                             <h5 class="card-title h-5">Tinjau pesanan nomor {{ $view->id }}</h5>
 
-                            <div class="bg-white mt-2 overflow-hidden shadow sm:rounded-lg">
+                            <div class="bg-white mt-2 overflow-hidden shadow rounded p-2">
                                 <div class="p-6  text-gray-900">
                                     <table class="table">
                                         <tr>

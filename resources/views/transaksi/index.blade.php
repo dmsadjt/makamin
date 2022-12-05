@@ -22,7 +22,7 @@
                         @endif
 
                         <div class="card-body">
-                            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                            <div class="bg-white overflow-hidden shadow rounded p-2">
                                 <div class="p-1 text-gray-900">
                                     <table class="table">
                                         <thead>

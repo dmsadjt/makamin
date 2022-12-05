@@ -4,7 +4,7 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col">
                 <div class="card">
                     <div class="card-header bg-dark text-white">{{ __('Dashboard') }}</div>
 
@@ -15,17 +15,15 @@
                             </div>
                         @endif
 
-                        <div class="py-12">
-                            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                                <div class="bg-white overflow-hidden shadow sm:rounded-lg">
-                                    <div class="p-6 text-gray-900">
+                        <div class="py-2">
+                            <div class="mx-auto">
+                                <div class="bg-white overflow-hidden shadow rounded py-2">
+                                    <div class="px-5 text-gray-900">
                                         <h1>Halo, {{ Auth::user()->name }}</h1>
                                         <p>Apa yang ingin anda lakukan hari ini?</p>
                                     </div>
 
-                                    <div class="p-6 text-gray-900">
-
-
+                                    <div class="px-5 text-gray-900">
                                         <div class="row rounded p-2 text-black shadow">
                                             <div class="col-10">
                                                 <h2 class="fs-3">Lihat daftar <span
@@ -36,8 +34,8 @@
                                                         aku!</a></button>
                                             </div>
                                             <div class="col-2">
-                                                <img src="/img/makamin.png" class=" rounded-circle shadow"
-                                                    alt="makamin.png">
+                                                <img src="/img/makamin.png" style="height: 10em"
+                                                    class="rounded-circle shadow" alt="makamin.png">
                                             </div>
                                         </div>
 
@@ -51,8 +49,8 @@
                                                         aku!</a></button>
                                             </div>
                                             <div class="col-2">
-                                                <img src="/img/makamin.png" class=" rounded-circle shadow"
-                                                    alt="makamin.png">
+                                                <img src="/img/makamin.png" style="height: 10em"
+                                                    class=" rounded-circle shadow" alt="makamin.png">
                                             </div>
                                         </div>
                                     </div>

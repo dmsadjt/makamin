@@ -24,7 +24,7 @@
 
                         <div class="card-body">
 
-                            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                            <div class="bg-white overflow-hidden shadow-sm rounded p-2">
                                 <h1 class="text-black fs-3 text-center mt-4">Form Pemesanan</h1>
                                 <div class="px-6 text-gray-900">
                                     <table class="table">

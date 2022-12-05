@@ -19,9 +19,9 @@
                         @endif
 
                         <div class="card-body">
-                            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                            <div class="bg-white overflow-hidden shadow-sm rounded p-2">
                                 <div class="p-6 text-gray-900">
-                                    <h1 class="fs-3">
+                                    <h1 class="fs-4">
                                         Pemesananmu pada Makam <span class="text-white bg-dark">{{ $view->nama }}</span>
                                         telah <span class="text-white bg-success">berhasil</span> pada tanggal
                                         <span class="bg-dark text-white">{{ $tr->tanggal_pemesanan }}</span>

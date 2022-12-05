@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col">
                 <div class="card">
                     <div class="card-header bg-dark text-white">Dashboard Makam</div>
 
@@ -15,13 +15,13 @@
                         @endif
 
                         <div class="card-body">
-                            <div class="bg-white overflow-hidden shadow sm:rounded-lg">
-                                <div class="p-6 text-gray-900">
+                            <div class="bg-white overflow-hidden shadow rounded p-2">
+                                <div class="px-5 text-gray-900">
                                     <h1>Halo, {{ Auth::user()->name }}</h1>
                                     <p>Lihat kondisi makam anda pada hari ini!</p>
                                 </div>
 
-                                <div class="p-6 text-gray-900">
+                                <div class="px-5 text-gray-900">
                                     <div class="row rounded mt-3 p-2 text-white bg-dark shadow">
                                         <div class="col-10">
                                             <h2 class="fs-3">Lihat daftar <span
@@ -32,7 +32,8 @@
                                                     aku!</a></button>
                                         </div>
                                         <div class="col-2">
-                                            <img src="/img/makamin.png" class=" rounded-circle shadow" alt="makamin.png">
+                                            <img src="/img/makamin.png" style="height: 10em" class="rounded-circle shadow"
+                                                alt="makamin.png">
                                         </div>
                                     </div>
                                 </div>

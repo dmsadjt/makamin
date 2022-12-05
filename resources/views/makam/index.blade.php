@@ -20,7 +20,7 @@
                         @endif
 
                         <div class="card-body">
-                            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                            <div class="bg-white overflow-hidden shadow-sm rounded">
                                 <div class="p-1 text-gray-900">
                                     <table class="table table-hover">
                                         <thead>
@@ -39,7 +39,7 @@
                                                         {{ $m->id }}
                                                     </td>
                                                     <td>{{ $m->nama }}</td>
-                                                    <td>{{ $m->alamat }}</td>
+                                                    <td>{{ Str::limit($m->alamat, 20) }}</td>
                                                     <td>{{ $m->agama }}</td>
                                                     <td>{{ $m->tempat_tersedia }}</td>
                                                     <td>{{ $m->harga }}</td>
@@ -54,7 +54,7 @@
 
                                 </div>
 
-                                <div class="p-3">
+                                <div class="d-flex justify-content-center">
                                     {{ $makam->links() }}
                                 </div>
                             </div>

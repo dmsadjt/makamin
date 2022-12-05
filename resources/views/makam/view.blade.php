@@ -23,7 +23,7 @@
 
                         <div class="card-body">
                             <h1 class="fs-3 text-black text-center">Detail Makam</h1>
-                            <div class="bg-white mt-2 overflow-hidden shadow-sm sm:rounded-lg">
+                            <div class="bg-white mt-2 overflow-hidden shadow-sm rounded p-2">
                                 <div class="p-6  text-gray-900">
                                     <table class="table">
                                         <tr>
