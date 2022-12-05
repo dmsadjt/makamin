@@ -6,12 +6,12 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div>
-                    <a class="btn btn-secondary mb-2" href="/admin/home">Kembali</a>
+                    <a class="btn btn-dark mb-2" href="/admin/home">Kembali</a>
                 </div>
                 <div class="card">
-                    <div class="card-header">Daftar Makam</div>
+                    <div class="card-header bg-dark text-white">Daftar Makam</div>
 
-                    <div class="card-body">
+                    <div class="card-body bg-purple-light">
                         @if (session('status'))
                             <div class="alert alert-success" role="alert">
                                 {{ session('status') }}
@@ -40,7 +40,8 @@
                                                     <td>{{ $m->alamat }}</td>
                                                     <td>{{ $m->agama }}</td>
                                                     <td>{{ $m->tempat_tersedia }}</td>
-                                                    <td><a href="/admin/makam/{{ $m->id }}">Lihat Makam</a></td>
+                                                    <td><a href="/admin/makam/{{ $m->id }}" class="link-dark">Lihat
+                                                            Makam</a></td>
                                                 </tr>
                                             @endforeach
 

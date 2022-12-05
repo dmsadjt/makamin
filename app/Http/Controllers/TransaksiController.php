@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Transaksi;
 use Illuminate\Http\Request;
 use App\Models\Makam;
+use Illuminate\Support\Facades\Auth;
 
 class TransaksiController extends Controller
 {
@@ -35,7 +36,18 @@ class TransaksiController extends Controller
         $makam->update([
             'tempat_tersedia' => $temp,
         ]);
-
         return redirect('/makam/success/' . $transaksi->id);
+    }
+
+    public function index()
+    {
+        $transaksi = Transaksi::where('user_id', Auth::user()->id)->paginate(10);
+        return view('transaksi.index', compact('transaksi'));
+    }
+
+    public function view($id)
+    {
+        $transaksi = Transaksi::where('id', $id)->first();
+        return view('transaksi.view', compact('transaksi'));
     }
 }

@@ -6,13 +6,13 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div>
-                    <a class="btn btn-secondary mb-2" href="/admin/home">Kembali</a>
+                    <a class="btn btn-dark mb-2" href="/admin/home">Kembali</a>
                 </div>
 
                 <div class="card">
-                    <div class="card-header">{{ __('Dashboard') }}</div>
+                    <div class="card-header bg-dark text-white">Daftar Transaksi</div>
 
-                    <div class="card-body">
+                    <div class="card-body bg-purple-light">
                         @if (session('status'))
                             <div class="alert alert-success" role="alert">
                                 {{ session('status') }}
@@ -44,7 +44,9 @@
                                                     <td>{{ $m->tanggal_pemesanan }}</td>
                                                     <td>{{ $m->jumlah_makam }}</td>
                                                     <td>{{ $m->total_pembelian }}</td>
-                                                    <td>{{ $m->status }}</td>
+                                                    <td><span
+                                                            class="{{ $m->status == 'disetujui' ? ' p-1 rounded bg-success text-white' : 'p-1 rounded bg-secondary text-white' }}">{{ $m->status }}</span>
+                                                    </td>
                                                     <td><a class="link-secondary"
                                                             href="/admin/transaksi/{{ $m->id }}">Tinjau transaksi</a>
                                                     </td>

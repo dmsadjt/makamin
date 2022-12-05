@@ -26,11 +26,56 @@
 </head>
 
 <body>
+
+    <style>
+        html {
+            --white: #F4F4F4;
+            --blacky: #121212;
+            --purple: #8670B6;
+            --purple-light: #ae9cd5;
+            --purple-lighter: #e7ddfc;
+        }
+
+        .bg-blacky {
+            background-color: var(--black);
+        }
+
+        .bg-purple {
+            background-color: var(--purple);
+        }
+
+        .bg-purple-light {
+            background-color: var(--purple-light);
+        }
+
+        .bg-purple-lighter {
+            background-color: var(--purple-lighter);
+        }
+
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        a,
+        .btn,
+        div {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .opacity-75 {
+            opacity: 0.75;
+        }
+    </style>
+
+
     <div id="app">
         <nav class="navbar sticky-top bg-dark navbar-expand shadow">
             <div class="container">
-                <a class="navbar-brand text-white" href="{{ url('/') }}">
-                    Makamin
+                <a class="navbar-brand text-white d-flex gap-2" href="{{ url('/') }}">
+                    <img src="/img/makamin.png" style="border-radius: 15em; width:2em" alt="makamin">
+                    <div class="d-flex align-items-center">Makamin</div>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -85,7 +130,7 @@
             </div>
         </nav>
 
-        <main class="py-4 bg-secondary" style="height: 100vh">
+        <main class="py-4 bg-purple" style="height: 100vh">
             @yield('content')
         </main>
     </div>

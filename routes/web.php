@@ -40,6 +40,8 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('/makam/success/{requestId}', [MakamController::class, 'success'])->name('makam.success');
     //Transaksi
     Route::post('/transaksi/post', [TransaksiController::class, 'post'])->name('transaksi.post');
+    Route::get('/transaksi', [TransaksiController::class, 'index'])->name('transaksi.index');
+    Route::get('/transaksi/{id}', [TransaksiController::class, 'view'])->name('transaksi.view');
 });
 
 

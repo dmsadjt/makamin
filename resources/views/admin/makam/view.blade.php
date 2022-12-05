@@ -8,12 +8,12 @@
             <div class="col-md-8">
 
                 <div>
-                    <a class="btn btn-secondary mb-2" href="/admin/makam">Kembali</a>
+                    <a class="btn btn-dark mb-2" href="/admin/makam">Kembali</a>
                 </div>
                 <div class="card">
-                    <div class="card-header">{{ $view->nama }}</div>
+                    <div class="card-header bg-dark text-white">Makam : {{ $view->nama }}</div>
 
-                    <div class="card-body">
+                    <div class="card-body bg-purple-light">
                         @if (session('status'))
                             <div class="alert alert-success" role="alert">
                                 {{ session('status') }}

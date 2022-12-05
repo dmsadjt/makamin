@@ -5,13 +5,11 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">
-                        <h1 class="h6">
-                            Dashboard Administrator
-                        </h1>
+                    <div class="card-header bg-dark text-white">
+                        Dashboard Administrator
                     </div>
 
-                    <div class="card-body">
+                    <div class="card-body bg-purple-light">
                         @if (session('status'))
                             <div class="alert alert-success" role="alert">
                                 {{ session('status') }}

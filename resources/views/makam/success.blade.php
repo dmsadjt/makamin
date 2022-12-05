@@ -7,9 +7,11 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('Dashboard') }}</div>
+                    <div class="card-header bg-dark text-white d-flex gap-3">
+                        <span class="d-flex align-items-center justify-content-center">Pemesanan berhasil</span>
+                    </div>
 
-                    <div class="card-body">
+                    <div class="card-body bg-purple-light">
                         @if (session('status'))
                             <div class="alert alert-success" role="alert">
                                 {{ session('status') }}
@@ -19,11 +21,16 @@
                         <div class="card-body">
                             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                                 <div class="p-6 text-gray-900">
-                                    Pemesananmu pada Makam {{ $view->nama }} telah berhasil pada tanggal
-                                    {{ $tr->tanggal_pemesanan }}
+                                    <h1 class="fs-3">
+                                        Pemesananmu pada Makam <span class="text-white bg-dark">{{ $view->nama }}</span>
+                                        telah <span class="text-white bg-success">berhasil</span> pada tanggal
+                                        <span class="bg-dark text-white">{{ $tr->tanggal_pemesanan }}</span>
+                                    </h1>
 
-                                    <p>Pesananmu akan diverifikasi oleh admin dan pemilik makam, informasi lebih lanjut
+                                    <p>Pesananmu akan diverifikasi oleh administrator dan pemilik makam, informasi lebih
+                                        lanjut
                                         dapat dilihat pada halaman Transaksi</p>
+                                    <a href="/home" class="btn btn-dark">Kembali ke beranda</a>
                                 </div>
                             </div>
 

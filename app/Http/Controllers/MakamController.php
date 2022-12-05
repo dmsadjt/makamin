@@ -12,7 +12,7 @@ class MakamController extends Controller
 {
     public function index()
     {
-        $makam = Makam::all();
+        $makam = Makam::paginate(10);
         return view('makam.index', compact('makam'));
     }
 

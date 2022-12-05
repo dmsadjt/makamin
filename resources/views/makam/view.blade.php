@@ -7,9 +7,14 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('Dashboard') }}</div>
+                    <div class="card-header bg-dark text-white d-flex gap-3">
+                        <button class="btn btn-outline-light"><a href="/makam"
+                                style="color:inherit; text-decoration:inherit">&lt;&lt;</a></button>
+                        <span class="d-flex align-items-center justify-content-center">Lihat Makam :
+                            {{ $view->nama }}</span>
+                    </div>
 
-                    <div class="card-body">
+                    <div class="card-body bg-purple-light">
                         @if (session('status'))
                             <div class="alert alert-success" role="alert">
                                 {{ session('status') }}
@@ -17,9 +22,10 @@
                         @endif
 
                         <div class="card-body">
+                            <h1 class="fs-3 text-black text-center">Detail Makam</h1>
                             <div class="bg-white mt-2 overflow-hidden shadow-sm sm:rounded-lg">
                                 <div class="p-6  text-gray-900">
-                                    <table>
+                                    <table class="table">
                                         <tr>
                                             <td>Nama Makam</td>
                                             <td>{{ $view->nama }}</td>
@@ -40,7 +46,7 @@
                                     </table>
 
                                     <a href="/makam/order/{{ $user->id }}/{{ $view->id }}"><button
-                                            class="btn btn-light mt-2">Pesan Tempat</button></a>
+                                            class="btn btn-dark mt-2">Pesan Tempat</button></a>
                                 </div>
                             </div>
 
