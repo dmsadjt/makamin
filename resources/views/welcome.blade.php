@@ -17,7 +17,7 @@
             line-height: 1.15;
             -webkit-text-size-adjust: 100%;
             --white: #F4F4F4;
-            --blacky: #121212;
+            --blacky: #1d1817;
             --purple: #8670B6;
             --purple-light: #ae9cd5;
             --purple-lighter: #e7ddfc;
@@ -430,35 +430,40 @@
 </head>
 
 <body class="antialiased">
-    <div class="relative flex items-top justify-center min-h-screen bg-blacky sm:items-center py-4 sm:pt-0">
+    <div class="relative flex items-top justify-center min-h-screen bg-blacky sm:items-center c sm:pt-0">
         @if (Route::has('login'))
             <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                 @auth
                     <form id="logout-form" action="{{ route('logout') }}" method="POST">
                         @csrf
-                        <input type="submit" class="btn btn-light" value="Log out">
+                        <input type="submit" class="btn btn-outline-light" value="Log out">
                     </form>
                 @else
-                    <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Login</a>
+                    <a href="{{ route('login') }}" class="btn btn-light">Login</a>
 
                     @if (Route::has('register'))
-                        <a href="{{ route('register') }}"
-                            class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
+                        <a href="{{ route('register') }}" class="btn btn-outline-light">Register</a>
                     @endif
                 @endauth
             </div>
         @endif
 
-        <div class="row">
-            <div class="col-8">
-                <h1 class="text-white">Makamin</h1>
+        <div class="row text-white">
+            <div class="col-8 mt-auto">
+                <img src="/img/makamin.png" class="rounded" style="height: 5em" alt="">
+                <h1 class="text-white">Makam.in</h1>
+                <p>Persiapkan yang Terbaik untuk Orang Tersayang</p>
+                <p>Makam.in hadir sebagai solusi pemakaman yang aman dan mudah bagi masyarakat di sekitar Surabaya </p>
 
+                <div>
+                    <a href="/register" class="btn btn-outline-light">Daftar Sekarang</a>
+                </div>
             </div>
-            <div class="col-4"></div>
+            <div class="col-4">
+                <img src="/img/imghero.jpg" style="width: 15em" class="rounded" alt="">
+            </div>
         </div>
     </div>
-
-
 
 </body>
 

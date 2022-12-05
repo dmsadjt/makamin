@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\MakamController;
+use App\Http\Controllers\MakamUserController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TransaksiController;
 use Illuminate\Support\Facades\Route;
@@ -28,6 +29,10 @@ Route::get('/', function () {
 
 Route::middleware(['auth', 'user-access:makam'])->group(function () {
     Route::get('/makam/home', [App\Http\Controllers\HomeController::class, 'makamHome'])->name('makam.home');
+    Route::get('/makam/transaksi', [MakamUserController::class, 'transaksiIndex'])->name('admin.transaksi.index');
+    Route::get('/makam/transaksi/{id}', [MakamUserController::class, 'transaksiView'])->name('admin.transaksi.view');
+    Route::post('/makam/transaksi/setujui', [MakamUserController::class, 'setujuiTransaksi']);
+    Route::post('/makam/transaksi/tolak', [MakamUserController::class, 'tolakTransaksi']);
 });
 
 
