@@ -5,7 +5,7 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col">
                 <div class="card">
                     <div class="card-header bg-dark text-white d-flex gap-3">
                         <span class="d-flex align-items-center justify-content-center">Pemesanan berhasil</span>

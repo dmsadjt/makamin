@@ -5,7 +5,7 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col">
                 <div class="card">
                     <div class="card-header bg-dark text-white d-flex gap-3">
                         <button class="btn btn-outline-light"><a href="/makam"
@@ -41,6 +41,10 @@
                                         <tr>
                                             <td>Tempat Tersedia di Makam</td>
                                             <td>{{ $view->tempat_tersedia }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Harga Makam (Rp)</td>
+                                            <td>{{ $view->harga }}</td>
                                         </tr>
 
                                     </table>

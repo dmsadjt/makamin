@@ -13,6 +13,7 @@ class Makam extends Model
         'nama',
         'alamat',
         'agama',
+        'harga',
         'tempat_tersedia',
     ];
 

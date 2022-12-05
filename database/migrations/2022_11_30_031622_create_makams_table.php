@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('nama');
             $table->string('alamat');
             $table->string('agama')->default('umum');
+            $table->bigInteger('harga')->default('3000000');
             $table->integer('tempat_tersedia');
         });
     }

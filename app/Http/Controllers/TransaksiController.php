@@ -24,14 +24,15 @@ class TransaksiController extends Controller
         ]);
 
         $transaksi = new Transaksi;
+        $makam = Makam::where('id', $data['makam_id'])->first();
         $transaksi->user_id = $data['user_id'];
         $transaksi->makam_id = $data['makam_id'];
         $transaksi->tanggal_pemesanan = $data['tgl_pesanan'];
         $transaksi->jumlah_makam = $data['jml_pesanan'];
+        $transaksi->total_pembelian = $data['jml_pesanan'] * $makam->harga;
         $transaksi->status = 'diproses';
         $transaksi->save();
 
-        $makam = Makam::where('id', $transaksi->makam_id)->first();
         $temp = $makam->tempat_tersedia - $transaksi->jumlah_makam;
         $makam->update([
             'tempat_tersedia' => $temp,

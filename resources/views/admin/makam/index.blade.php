@@ -4,7 +4,7 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col">
                 <div>
                     <a class="btn btn-dark mb-2" href="/admin/home">Kembali</a>
                 </div>
@@ -28,6 +28,7 @@
                                             <th>Alamat</th>
                                             <th>Agama</th>
                                             <th>Tempat Tersedia</th>
+                                            <th>Harga (Rp)</th>
                                             <th>Aksi</th>
                                         </thead>
                                         <tbody>
@@ -40,6 +41,7 @@
                                                     <td>{{ $m->alamat }}</td>
                                                     <td>{{ $m->agama }}</td>
                                                     <td>{{ $m->tempat_tersedia }}</td>
+                                                    <td>{{ $m->harga }}</td>
                                                     <td><a href="/admin/makam/{{ $m->id }}" class="link-dark">Lihat
                                                             Makam</a></td>
                                                 </tr>

@@ -4,7 +4,7 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col">
                 <div class="card">
                     <div class="card-header bg-dark text-white d-flex gap-3">
                         <button class="btn btn-outline-light"><a href="/home"
@@ -21,7 +21,7 @@
 
                         <div class="card-body">
                             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                                <div class="p-6 text-gray-900">
+                                <div class="p-1 text-gray-900">
                                     <table class="table table-hover">
                                         <thead>
                                             <th>#</th>
@@ -29,6 +29,7 @@
                                             <th>Alamat</th>
                                             <th>Agama</th>
                                             <th>Tempat Tersedia</th>
+                                            <th>Harga (Rp)</th>
                                             <th>Aksi</th>
                                         </thead>
                                         <tbody class="table-striped ">
@@ -41,6 +42,7 @@
                                                     <td>{{ $m->alamat }}</td>
                                                     <td>{{ $m->agama }}</td>
                                                     <td>{{ $m->tempat_tersedia }}</td>
+                                                    <td>{{ $m->harga }}</td>
                                                     <td><a href="/makam/{{ $m->id }}" class="text-dark">Lihat
                                                             Makam</a></td>
                                                 </tr>

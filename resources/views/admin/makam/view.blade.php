@@ -5,7 +5,7 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col">
 
                 <div>
                     <a class="btn btn-dark mb-2" href="/admin/makam">Kembali</a>
@@ -39,6 +39,10 @@
                                         <tr>
                                             <td>Tempat Tersedia di Makam</td>
                                             <td>{{ $view->tempat_tersedia }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Harga Makam (Rp)</td>
+                                            <td>{{ $view->harga }}</td>
                                         </tr>
 
                                     </table>

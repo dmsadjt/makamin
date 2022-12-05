@@ -21,7 +21,7 @@ return new class extends Migration
             $table->bigInteger('makam_id');
             $table->date('tanggal_pemesanan');
             $table->integer('jumlah_makam');
-            $table->float('total_pembelian')->default(150000);
+            $table->double('total_pembelian')->default(150000);
             $table->string('status')->default('diproses');
         });
     }

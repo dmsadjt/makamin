@@ -27,6 +27,7 @@ class MakamFactory extends Factory
             'nama' => $faker->company(),
             'alamat' => $faker->address(),
             'agama' => "islam",
+            'harga' => random_int(1000000, 3000000),
             'tempat_tersedia' => random_int(1, 100)
         ];
     }
